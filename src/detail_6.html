@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles-merged.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>CDUT地质数据共享平台demo v_1.2</title>
+
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.min.js"></script>
+    <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .iw_poi_title {
+            color: #CC5522;
+            font-size: 14px;
+            font-weight: bold;
+            overflow: hidden;
+            padding-right: 13px;
+            white-space: nowrap
+        }
+
+        .iw_poi_content {
+            font: 12px arial, sans-serif;
+            overflow: visible;
+            padding-top: 4px;
+            white-space: -moz-pre-wrap;
+            word-wrap: break-word
+        }
+
+        .anchorBL {
+            display: none;
+        }
+
+        #title {
+            text-align: center;
+            font-family: "隶书";
+            font-size: 40px;
+            margin-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        .detail_title {
+            color: black;
+            text-align: center;
+            font-family: "隶书";
+            font-size: 30px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        a {
+            color: black;
+        }
+
+        #dituContent {
+            float: left;
+            border: 1px;
+        }
+
+        #result_title {
+            text-align: center;
+            font-family: "隶书";
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        #result_area {
+            margin-left: 20px;
+            float: left;
+            border: 1px;
+            color: black;
+        }
+
+        #function {
+            float: left;
+            margin-left: 5px;
+            border: 1px;
+            color: blue;
+        }
+
+        #introduction {
+            font-family: "隶书";
+            font-size: 25px;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            color: #FFF;
+        }
+
+        #instruction {
+            margin-top: 10px;
+            float: left;
+            color: red;
+            border: 1px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        #guide {
+            color: white;
+        }
+
+        #dituContent label {
+            max-width: none;
+        }
+    </style>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?ak=AXxhoN2pMyvrj29HcdeoIADdj5XBGVUw&v=2.0&services=true"></script>
+</head>
+
+<body>
+<!-- START: header -->
+<header role="banner" class="probootstrap-header">
+    <div class="container">
+        <a href="http://www.cdut.edu.cn/" class="probootstrap-logo">Chengdu University of Technology</a>
+
+        <a href="#" class="probootstrap-burger-menu visible-xs"><i>Menu</i></a>
+        <div class="mobile-menu-overlay"></div>
+
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+            <ul class="probootstrap-main-nav">
+                <li><a href="index.html">主页</a></li>
+                <li class="active"><a href="Map_demo_baidu.html">进入平台</a></li>
+                <li><a href="introduction.html">平台简介</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul>
+            <div class="extra-text visible-xs">
+                <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+                <h5>Connect</h5>
+                <ul class="social-buttons">
+                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon-facebook2"></i></a></li>
+                    <li><a href="#"><i class="icon-instagram2"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- END: header -->
+<div>
+    <div class="probootstrap-main-content">
+        <!-- class="overlay" -->
+        <li style="background-image: url(img/slider_6.jpg);">
+            <div style="background: rgba(0, 0, 0, 0.6);width: 100%;height: 330vh;margin-top: -132px;padding-top: 200px;">
+                <div style="background: whitesmoke;border-radius: 14px;" class="container">
+                    <div id="title">
+                        四川省盐边县中干沟矿区钒钛磁铁矿勘探报告
+                    </div>
+                    <div id="abstract">
+                        <div class="detail_title">
+                            摘要
+                        </div>
+                        <p style="text-indent:30px;color:black">
+                            四川省盐边县中干沟矿区位于四川省盐边县128度方位、直距19.5km。矿区地理坐标：东经101度56分15秒～101度57分15秒、北纬26度35分15秒～26度36分15秒，隶属于盐边县新九乡管辖。2014年11月，四川省冶金地质勘查院参加云南众智招标代理有限公司“攀枝花昆钢集团有限公司中干沟钒钛磁铁矿地质勘探工程”公开招标中中标，承担四川省盐边县中干沟钒钛磁铁矿区地质勘探工作。四川省盐边县中干沟矿区钒钛磁铁矿勘探完成1:2千地质修测3.07平方公里、1:1千勘探线剖面测量16.5公里、1:2千水工环地质测量4平方公里、1:2千高精度磁测1.4平方公里、槽探504.18立方、钻探进尺21268.09米、基本分析5693件，地勘费总投入2600万元。矿体在华力西期基性-超基性岩体呈层状－似层状平行产出，成因类型为岩浆分异型。参与资源量计算的矿体8个，其中主要矿体7个，次要矿体1个，另有10个透镜状小矿体未估算资源量。主要矿体长478-1666米，东西向水平宽（斜深）298-670米。主矿种铁，同体共生钒、钛，矿床平均品位全铁
+                            27.55%，二氧化钛 11.61%，五氧化二钒
+                            0.254%。主要矿体勘探类型为II类，331资源量工程间距100×100米，332资源量工程间距200×200米，333资源量工程间距400×400米，次要矿体勘探类型为Ⅲ类，工程间距加密1倍。通过“原矿-10米米抛尾－阶磨阶选（选铁）－强磁浮选（选硫钴和钛）”选矿工艺流程，可以获得合格的钒铁精矿和钛精矿，主要有用组分回收率较高，为可选矿石。中干沟矿区拟地下开采，为以环境地质问题为主的开采技术条件复杂类型。截止2016年5月底，四川省储量评审中心评审结论：勘探程度、工作质量符合规范要求，基本满足矿山设计需要，评审评定331+332+333资源量：铁矿石23324.5万吨，二氧化钛
+                            27080601吨，五氧化二钒 592454吨。矿区另有331+332+333低品位矿资源量：铁矿石6631.6万吨，二氧化钛 5021617吨，五氧化二钒 93556吨。 </p>
+                        <div class="detail_title">
+                            项目概况
+                        </div>
+                        <p style="text-indent:30px;color:black">
+                            “四川-云南1∶5万通安、皎车渡、长官司幅区域地质调查”子项目，归属于“东特提斯成矿带大型资源基地调查”工程下设的“龙门山-滇中成矿带通安和宁蒗地区矿产地质调查”项目，由自然资源部中国地质调查局成都地质调查中心承担。子项目周期为2016—2018年。主要目标任务是开展1∶5万区域地质调查工作，系统查明区内地层、岩石、构造特征和成矿地质条件，开展调查区内石墨矿成矿背景调查研究工作，发现新的石墨矿化线索，助推形成攀枝花大型晶质石墨矿资源基地。
+                        </p>
+                    </div>
+                    <div id="result_introduction">
+                        <div class="detail_title">
+                            成果简介
+                        </div>
+                        <p style="text-indent:30px;color:black">
+                            （1）唐家坪晶质石墨矿位于攀枝花盐边县同德杂岩体西侧，北部距离田坪石墨矿约5km，南部距离南阳石墨矿约4km（图1）。矿（化）体呈层状产于新元古代石英闪长岩与围岩接触带内，含矿地层为前寒武纪盐边群渔门组（Pt2ym），赋矿岩石为含炭质的泥质—粉砂质板岩。矿化体地表较稳定延伸长度约2400
+                            m，最宽处出露约200m，主体产状10°∠70°，总体呈北西—南东东向展布（图2），出露面积0.47km2。经地表探槽、天然陡坎取样初步控制矿体长度约1300m，厚度6.37~33.21m，测试分析固定碳含量为2.48%~9.45%，平均固定碳含量6.82%。多条物探剖面揭示含矿地质体深部延伸较稳定，预估石墨矿资源量为141.88万t，石墨矿石量为3209.99万t，可达大型矿床规模。
+
+
+                            图1 攀枝花盐边县同德地区矿产地质略图
+                            1—中元古界延边群渔门组；2—中元古界延边群荒田组；3—震旦系-泥盆系；4—震旦系-早二叠统；5—二叠纪峨嵋山组玄武岩；6—新近纪昔格达组；7—第四系；8—辉长岩；9—闪长岩；10—辉长-闪长岩；11—石英闪长岩；12—辉石岩；13—玄武岩；14—石墨矿体；15—断层；16—矿权范围
+
+
+                            图2 攀枝花盐边县唐家坪石墨矿地质草图
+
+                            （2）调查发现在唐家坪地区靠近同德杂岩体的渔门组中，由内向外依次发育红柱石石墨片岩（图3-B）、斑点板岩（图3-C）、板岩等蚀变分带，相应固定碳含量亦出现逐渐变低的趋势，结合X衍射分析数据估算出成矿温度约为440℃，显示与岩浆活动密切相关的热接触变质成矿作用特征。获得12件石墨矿样品δ13C同位素比值为-21.5‰～-26.6‰，平均值为-24.2‰，测试结果相对集中且偏差较小，确定其炭质来源应为地层中沉积的生物有机碳。综合分析认为，唐家坪石墨矿经历了中元古代渔门组时期含炭碎屑岩系沉积、新元古代区域变质形成渔门组含炭泥质-粉砂质板岩及其随后同德杂岩体岩浆活动热接触变质晶质石墨成矿的三阶段演化过程，矿床成因为沉积变质型，其中热接触变质作用是其晶质石墨成矿的关键。
+
+
+                            图3 攀枝花盐边县唐家坪石墨矿特征
+                            A—石墨片岩；B—红柱石石墨片岩；C—斑点状板岩；D—X衍射及扫描电镜下晶质石墨
+
+                            （3）攀枝花盐边县田坪—同德地区是晶质石墨矿集中分布区。唐家坪晶质石墨矿的发现，将同德杂岩体西侧的田坪石墨矿、南阳石墨矿有机地联系在一起，构成了一条断续延伸长近20km的晶质石墨矿带；空间上，与同德杂岩体东侧的大菁沟石墨矿、同德杂岩体南侧的新生石墨矿一起，共同组成了以同德杂岩体为中心、围岩接触带为赋矿有利部位，呈环带状展布的大型晶质石墨矿集中区。矿集区内成矿地质背景好，找矿潜力大，前期矿产普查和近年来商业性勘查投入，已探获石墨矿资源量逾2000万t，潜力评价预测石墨矿资源量可达4000万t。
+                        </p>
+                        <div>
+                            出版单位：四川省冶金地质勘查院<br>
+                            项目负责人：白四<br>
+                            联系电话：138XXXXXXXX<br>
+                        </div>
+                        <br>
+                        <div>
+                            附件（2个）
+                            <div>
+                                <a href="">普通附件</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                                <a href="">全部下载</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                                <a href="">全部收藏</a>
+                                <br>
+                                <div>
+                                    <img src="img/img_pdf.jpg" width="40" height="40">&nbsp&nbsp四川省盐边县中干沟矿区钒钛磁铁矿勘探报告.pdf
+                                </div>
+                                <br>
+                                <div>
+                                    <img src="img/img_zip.jpg" width="40" height="40">&nbsp&nbsp图集-四川省盐边县中干沟矿区钒钛磁铁矿勘探报告.zip
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </li>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="content.js">
+</script>
+</html>
